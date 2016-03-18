@@ -1,0 +1,64 @@
+//
+// + Variables
+// =============================================================================
+
+$break-max: 1280 !default;
+$break-amount: 12 !default;
+
+//
+// + Map
+// =============================================================================
+
+$break-map: () !default;
+
+@mixin break-map($amount, $max) {
+  @for $i from 1 through $amount {
+    $break: ($i: ($max / $amount) * $i);
+    $break-map: map-merge($break-map, $break) !global;
+  }
+}
+
+@include break-map($break-amount, $break-max);
+
+
+//
+// + Break
+// =============================================================================
+
+@mixin break($break) {
+  @media (min-width: em(map-get($break-map, $break))) {
+    @content;
+  }
+}
+
+//
+// + Include
+// =============================================================================
+
+$break-include: null !default;
+
+@mixin break-include {
+  @for $i from 1 through $break-amount {
+    $break-include: $i !global;
+
+    @include break($i) {
+      @content;
+    }
+  }
+}
+
+//
+// + Adapter
+// =============================================================================
+
+@mixin break-adapter($name, $breaks) {
+  @each $break in $breaks {
+    @if type-of($break) == 'number' {
+      @extend %#{dash($name $break)};
+    }
+    @else if type-of($break) == 'string' {
+      $split: str-split($break, ':');
+      @extend %#{dash($name nth($split, 1) nth($split, 2))};
+    }
+  }
+}
