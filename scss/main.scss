@@ -2,8 +2,8 @@
 // + Variables
 // =============================================================================
 
-$break-max: 1280 !default;
 $break-amount: 12 !default;
+$break-max: 1280 !default;
 
 //
 // + Map
@@ -38,6 +38,8 @@ $break-map: () !default;
 $break-include: null !default;
 
 @mixin break-include {
+  @content;
+
   @for $i from 1 through $break-amount {
     $break-include: $i !global;
 
