@@ -6,24 +6,62 @@ Break
 ## Why?
 + Created for syncing grids and breakpoints
 + Automatically extends input, even within media queries
-+ Includes a shorthand mixin
++ Includes a `break-adapter` mixin for creating shorthand break plugins
 
 ## Breaks
-+ Creates media queries based on item widths
++ Generates media queries
 + Each break is the width of `$break-max` divided by `$break-amount` plus the width of the previous break
 + Each break width is added to the `$break-map` map
 
-This example break will activate when the browser width exceeds the 4th break.
+#### Using breaks
+
+This example break will activate when the browser width exceeds the 2nd break.
 
 ```scss
 .break {
-  @include break(4) {
+  @include break(2) {
     // ...
   }
 }
 ```
 
 ## Includes
++ Creates breaks for the inner code
++ Updates a global variable `$break-include` which is the value of the break currently being processed
 
+#### Using includes
++ Inner code should utilize the `$break-include` global variable to create changes between each break
++ The amount of breaks is controlled by the `$break-amount` variable
+
+```scss
+@include break-include {
+  // ...
+}
+```
+
+#### Example
++ Outputs different code for each break.
+
+```scss
+@include break-include {
+  @if $break-include == 1 {
+    // ...
+  }
+  @else if $break-include == 2 {
+    // ...
+  }
+  // ...
+}
+```
 
 ## Adapters
++ Used to determine which break to extend from
+
+#### Using adapters
+
+
+```scss
+@mixin item($breaks) {
+  @include break-adapter('item', $breaks);
+}
+```
