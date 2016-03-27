@@ -4,7 +4,7 @@ Break
 > Sweet responsive breakpoints
 
 ## Why?
-+ Created for syncing grids and breakpoints
++ Created for synchronizing grids and breakpoints
 + Automatically extends input, even within media queries
 + Includes a `break-adapter` mixin for creating shorthand break plugins
 
@@ -40,7 +40,8 @@ This example break will activate when the browser width exceeds the 2nd break.
 ```
 
 #### Example
-+ Outputs different code for each break.
+
+This example outputs different code for each break.
 
 ```scss
 @include break-include {
@@ -50,7 +51,6 @@ This example break will activate when the browser width exceeds the 2nd break.
   @else if $break-include == 2 {
     // ...
   }
-  // ...
 }
 ```
 
