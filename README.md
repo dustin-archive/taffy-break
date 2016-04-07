@@ -5,7 +5,7 @@ Break
 
 ## Why?
 + Created for synchronizing grids and breakpoints
-+ Automatically extends input, even within media queries
++ Automatically extends content, even within media queries
 + Includes a `break-adapter` mixin for creating shorthand break plugins
 
 ## Breaks
@@ -55,13 +55,23 @@ This example outputs different code for each break.
 ```
 
 ## Adapters
-+ Used to determine which break to extend from
++ Determines which break to extend from
 
 #### Using adapters
 
+Define an adapter like this.
 
 ```scss
 @mixin item($breaks) {
   @include break-adapter('item', $breaks);
+}
+```
+
+Now use your adapter like this.
+
+```scss
+.item {
+  @include item(2 '6:4' '8:6');
+  // ...
 }
 ```
