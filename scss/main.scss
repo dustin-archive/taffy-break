@@ -54,12 +54,6 @@ $break-include: null !default;
 
 @mixin break-adapter($name, $breaks) {
   @each $break in $breaks {
-    @if type-of($break) == 'number' {
-      @extend %#{dash($name $break)};
-    }
-    @else if type-of($break) == 'string' {
-      $split: str-split($break, ':');
-      @extend %#{dash($name nth($split, 1) nth($split, 2))};
-    }
+    @extend %#{merge(flatten($name $break), '-')};
   }
 }
