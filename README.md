@@ -8,6 +8,18 @@ Break
 + Automatically extends content, even within media queries
 + Includes a `break-adapter` mixin for creating shorthand break plugins
 
+## Getting Started
++ Install with Bower
++ Import the component
+
+```
+$ bower install --save taffy-break
+```
+
+```scss
+@import '../../bower_components/taffy-break/scss/main';
+```
+
 ## Breaks
 + Generates media queries
 + Each break is the width of `$break-max` divided by `$break-amount` plus the width of the previous break
