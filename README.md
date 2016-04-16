@@ -10,13 +10,14 @@ Break
 
 ## Getting Started
 + Install with Bower
-+ Import the component
++ Import the components
 
 ```
 $ bower install --save taffy-break
 ```
 
 ```scss
+@import '../../bower_components/fizz-sass/scss/main';
 @import '../../bower_components/taffy-break/scss/main';
 ```
 
