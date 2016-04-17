@@ -29,35 +29,3 @@ $break-map: () !default;
     @content;
   }
 }
-
-//
-// + Include
-// =============================================================================
-
-$break-include: null !default;
-
-@mixin break-include {
-  @content;
-
-  @for $i from 1 through $break-amount {
-    $break-include: $i !global;
-
-    @include break($i) {
-      @content;
-    }
-  }
-}
-
-//
-// + Adapter
-// =============================================================================
-
-@mixin break-adapter($name, $breaks) {
-  @each $break in $breaks {
-    @if length($break) == 1 {
-      $break: $break $break;
-    }
-
-    @extend %#{merge(flatten($name $break), '-')};
-  }
-}
