@@ -37,7 +37,7 @@ $break-max: 40em;
 ```
 
 ## Breaks
-+ Generates media queries represent columns set with `$break-amount` that span across the width of `$break-max`
++ Generates media queries that represent columns set with `$break-amount` that span across the width of `$break-max`
 
 #### Using breaks
 The `break` mixin accepts one argument that defines which break to use.
