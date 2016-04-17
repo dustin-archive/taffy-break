@@ -54,6 +54,10 @@ $break-include: null !default;
 
 @mixin break-adapter($name, $breaks) {
   @each $break in $breaks {
+    @if length($break) == 1 {
+      $break: $break $break;
+    }
+
     @extend %#{merge(flatten($name $break), '-')};
   }
 }
