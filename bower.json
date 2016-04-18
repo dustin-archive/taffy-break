@@ -18,8 +18,5 @@
   "ignore": [
     "**/.*",
     "bower_components"
-  ],
-  "dependencies": {
-    "fizz-sass": "^2.0.0"
-  }
+  ]
 }
