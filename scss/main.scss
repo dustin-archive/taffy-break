@@ -29,3 +29,21 @@ $break-map: () !default;
     @content;
   }
 }
+
+//
+// + Loop
+// =============================================================================
+
+$break-loop: null !default;
+
+@mixin break-loop($amount) {
+  @content;
+
+  @for $i from 1 through $amount {
+    $break-loop: $i !global;
+
+    @include break($break-loop) {
+      @content;
+    }
+  }
+}
