@@ -24,8 +24,8 @@ $break-map: () !default;
 // + Break
 // =============================================================================
 
-@mixin break($break) {
-  @media (min-width: map-get($break-map, $break)) {
+@mixin break($break, $m: 'min') {
+  @media (#{$m}-width: map-get($break-map, $break)) {
     @content;
   }
 }
