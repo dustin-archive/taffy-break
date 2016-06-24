@@ -16,5 +16,5 @@ $ bower install --save taffy-break
 ```
 
 ```scss
-@import '../bower_components/taffy-break/scss/main';
+@import 'bower_components/taffy-break/scss/main';
 ```
