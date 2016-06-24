@@ -4,6 +4,7 @@
 
 $break-amount: 12 !default;
 $break-max: 80em !default;
+$break-loop: null !default;
 
 //
 // + Map
@@ -33,8 +34,6 @@ $break-map: () !default;
 //
 // + Loop
 // =============================================================================
-
-$break-loop: null !default;
 
 @mixin break-loop($amount) {
   @content;
