@@ -4,13 +4,12 @@
 
 $break-amount: 12 !default;
 $break-loop: null !default;
+$break-map: () !default;
 $break-max: 80em !default;
 
 //
 // + Map
 // =============================================================================
-
-$break-map: () !default;
 
 @mixin break-map($amount, $max) {
   @for $i from 1 through $amount {
