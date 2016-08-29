@@ -29,8 +29,14 @@ $_break-map: () !default;
 // + Break
 // =============================================================================
 
-@mixin break($break, $prefix: 'min') {
-  @media (#{$prefix}-width: map-get($_break-map, $break)) {
+@mixin break($break) {
+  @media (min-width: map-get($_break-map, $break)) {
+    @content;
+  }
+}
+
+@mixin break-max($break) {
+  @media (max-width: (map-get($_break-map, $break) - 1px)) {
     @content;
   }
 }
