@@ -36,7 +36,7 @@ $_break-map: () !default;
 }
 
 @mixin break-max($break) {
-  @media (max-width: (map-get($_break-map, $break) - 1px)) {
+  @media (max-width: map-get($_break-map, $break) - 1px) {
     @content;
   }
 }
