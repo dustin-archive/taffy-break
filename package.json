@@ -7,6 +7,12 @@
     "type": "git",
     "url": "git+https://github.com/taffy-grid/break.git"
   },
+  "author": "Dustin Dowell <dustindowell22@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taffy-grid/break/issues"
+  },
+  "homepage": "https://github.com/taffy-grid/break#readme",
   "keywords": [
     "taffy",
     "break",
@@ -14,11 +20,5 @@
     "css",
     "sass",
     "scss"
-  ],
-  "author": "Dustin Dowell <dustindowell22@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/taffy-grid/break/issues"
-  },
-  "homepage": "https://github.com/taffy-grid/break#readme"
+  ]
 }
