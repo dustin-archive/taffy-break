@@ -1,0 +1,24 @@
+{
+  "name": "taffy-break",
+  "version": "4.0.0",
+  "description": "Sweet responsive breakpoints",
+  "main": "scss/main.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taffy-grid/break.git"
+  },
+  "keywords": [
+    "taffy",
+    "break",
+    "breakpoint",
+    "css",
+    "sass",
+    "scss"
+  ],
+  "author": "Dustin Dowell <dustindowell22@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taffy-grid/break/issues"
+  },
+  "homepage": "https://github.com/taffy-grid/break#readme"
+}
