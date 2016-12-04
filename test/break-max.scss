@@ -1,0 +1,9 @@
+@import '../main.scss';
+
+.break-max {
+  @for $i from 1 through $break-amount {
+    @include break-max($i) {
+      margin: $i;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import '../main.scss';
+
+.break {
+  @for $i from 1 through $break-amount {
+    @include break($i) {
+      margin: $i;
+    }
+  }
+}

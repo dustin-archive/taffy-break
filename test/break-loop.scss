@@ -1,0 +1,7 @@
+@import '../main.scss';
+
+.break-loop {
+  @include break-loop($break-amount) {
+    margin: $_break-loop;
+  }
+}
