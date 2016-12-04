@@ -1,32 +1,32 @@
 //
-// + Variables
+// # Variables
 // =============================================================================
 
 $break-amount: 12 !default;
 $break-max: 960px !default;
 
 //
-// + Hooks
+// # Hooks
 // =============================================================================
 
 $_break-loop: null !default;
 $_break-map: () !default;
 
 //
-// + Map
+// # Map
 // =============================================================================
 
-@mixin break-map($amount, $max) {
+@mixin _break-map($amount, $max) {
   @for $i from 1 through $amount {
     $break: ($i: ($max / $amount) * $i);
     $_break-map: map-merge($_break-map, $break) !global;
   }
 }
 
-@include break-map($break-amount, $break-max);
+@include _break-map($break-amount, $break-max);
 
 //
-// + Break
+// # Break
 // =============================================================================
 
 @mixin break($break) {
@@ -42,7 +42,7 @@ $_break-map: () !default;
 }
 
 //
-// + Loop
+// # Loop
 // =============================================================================
 
 @mixin break-loop($amount) {
