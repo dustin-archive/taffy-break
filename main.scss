@@ -16,14 +16,14 @@ $_break-map: () !default;
 // # Map
 // =============================================================================
 
-@mixin break-map($amount, $max) {
+@mixin _break-map($amount, $max) {
   @for $i from 1 through $amount {
     $break: ($i: ($max / $amount) * $i);
     $_break-map: map-merge($_break-map, $break) !global;
   }
 }
 
-@include break-map($break-amount, $break-max);
+@include _break-map($break-amount, $break-max);
 
 //
 // # Break
